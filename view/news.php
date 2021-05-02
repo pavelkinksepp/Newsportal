@@ -4,8 +4,9 @@ class ViewNews{
         foreach ($arr as $value) {
             echo '<img src ="data:image/jpeg;base64,' . base64_encode($value['picture']) . '"
       width=150 /><br>';
-            Controller::CommentsCount($value['id']);
             echo "<h2>" . $value['title'] . "</h2>";
+            Controller::CommentsCount($value['id']);
+            echo "</br><a href='new?id".$value['id']."'>Edasi</a><br>";
         }
     }
 

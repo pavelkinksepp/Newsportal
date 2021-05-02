@@ -15,7 +15,7 @@ class Comments{
         $arr = $db->getAll($query);
         return $arr;
     }
-    public static function getCommentCountByNewsID($id){
+    public static function getCommentsCountByNewsID($id){
         $query = "SELECT count(id) as 'count' FROM comments WHERE new_id".(string)$id;
         $db = new Database();
         $c = $db->getOne($query);

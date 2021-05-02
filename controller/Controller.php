@@ -36,7 +36,7 @@ class Controller {
     }
 
     public static function CommentsCount($newsid){
-        $arr = Comments::getCommentCountByNewsID($newsid);
+        $arr = Comments::getCommentsCountByNewsID($newsid);
         ViewComments::CommentsCount($arr);
     }
 
